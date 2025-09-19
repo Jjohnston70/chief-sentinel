@@ -1,23 +1,49 @@
-Enterprise-grade compliance monitoring and operational management for petroleum companies.
-PetroSentinel is a comprehensive Google Apps Script-based system that automates EPA compliance tracking, DOT regulations, inventory management, and operational oversight for petroleum distributors and fuel delivery companies.
+🚀 Quick Start
+Get PetroSentinel running in 5 minutes:
 
-Table of Contents
+Deploy the system
+
+javascript   // In Google Apps Script, run this function:
+   setupPetroSentinelSystem()
+
+Configure for your operation
+
+Update email addresses throughout the system
+Modify tank IDs and capacities in ullage logs
+Enter current compliance schedules
+Add company personnel to contact directory
+
+
+Test automated alerts
+
+javascript   // Run manual test functions:
+   runManualComplianceCheck()
+   sendManualUllageReminder()
+
+Access your system
+
+Open the generated Google Sheets URL
+Share with authorized personnel
+Begin daily operations
+
+
+
+
+📋 Table of Contents
 
 Features
 System Requirements
-Quick Start
 Installation Guide
 System Architecture
 Configuration
 Usage
 Compliance Coverage
 API Reference
-Contributing
 Support
 License
 
 
-Features
+✨ Features
 Core Compliance Management
 
 EPA Vapor Testing Tracking - 1-year and 5-year cycles with automated alerts
@@ -47,14 +73,9 @@ Operational Analytics - Inventory trends, asset utilization, driver performance
 Audit Trail - Complete documentation for regulatory inspections
 
 
-System Requirements
+🔧 System Requirements
 Technical Requirements
-
-Google Workspace Account (Business or Enterprise recommended)
-Google Apps Script access (included with Workspace)
-Modern Web Browser (Chrome, Firefox, Safari, Edge)
-Email System capable of receiving automated notifications
-
+ComponentRequirementGoogle WorkspaceBusiness or Enterprise (recommended)Apps Script AccessIncluded with WorkspaceWeb BrowserChrome, Firefox, Safari, EdgeEmail SystemCapable of receiving automated notifications
 User Requirements
 
 Basic Google Sheets proficiency for data entry and review
@@ -68,40 +89,8 @@ Mobile devices for field data entry and emergency access
 Reliable internet connection for real-time synchronization
 
 
-Quick Start
-5-Minute Setup
-
-Deploy the system:
-
-javascript   // In Google Apps Script, run this function:
-   setupPetroSentinelSystem()
-
-Customize for your operation:
-
-Update email addresses throughout the system
-Modify tank IDs and capacities in ullage logs
-Enter your current compliance schedules
-Add company personnel to contact directory
-
-
-Test automated alerts:
-
-javascript   // Run manual test functions:
-   runManualComplianceCheck()
-   sendManualUllageReminder()
-
-Access your system:
-
-Open the generated Google Sheets URL
-Share with authorized personnel
-Begin daily operations
-
-
-
-
-Installation Guide
+📦 Installation Guide
 Step 1: Google Apps Script Setup
-
 Create New Project
 
 Navigate to script.google.com
@@ -109,40 +98,37 @@ Click "New Project"
 Replace default code with PetroSentinel script
 Save as "PetroSentinel System"
 
-
 Authorize Permissions
 
 Run setupPetroSentinelSystem()
 Grant all requested permissions
 Note the generated spreadsheet URL
 
-
-
 Step 2: System Configuration
-
 Email Configuration
-
-javascript   // Replace all instances of @chiefpetroleum.com with your domain
-   // Update notification recipients in each alert function
-
+javascript// Replace all instances of @chiefpetroleum.com with your domain
+// Update notification recipients in each alert function
 Tank Configuration
-
-javascript   // Update tank IDs, capacities, and product types
-   const tankConfig = [
-     { id: "T-001", capacity: 10000, product: "Regular Unleaded 87" },
-     { id: "T-002", capacity: 15000, product: "Ultra Low Sulfur Diesel" }
-   ];
-
+javascript// Update tank IDs, capacities, and product types
+const tankConfig = [
+  { 
+    id: "T-001", 
+    capacity: 10000, 
+    product: "Regular Unleaded 87" 
+  },
+  { 
+    id: "T-002", 
+    capacity: 15000, 
+    product: "Ultra Low Sulfur Diesel" 
+  }
+];
 Compliance Schedules
 
 Enter current EPA vapor test dates
 Update driver certification expiration dates
 Set alert timing preferences (default: 60/30/15 days)
 
-
-
 Step 3: Data Population
-
 Priority Data Entry
 
 Compliance Tracking: All current certifications and due dates
@@ -150,23 +136,18 @@ Driver Records: Complete driver information and emergency contacts
 Contact Directory: Verify all phone numbers and email addresses
 Company Assets: Inventory all technology equipment
 
-
 Knowledge Base Setup
 
 Review and customize petroleum procedures
 Add company-specific safety protocols
 Update emergency response procedures
 
-
-
 Step 4: User Access Management
-
 Spreadsheet Sharing
 
 Add authorized users with appropriate permissions
 Set up department-specific access levels
 Configure view-only access for external auditors
-
 
 Training and Documentation
 
@@ -175,9 +156,7 @@ Distribute quick reference guides
 Establish data entry protocols
 
 
-
-
-System Architecture
+🏗️ System Architecture
 Google Apps Script Foundation
 PetroSentinel Core
 ├── setupPetroSentinelSystem()     // Master deployment function
@@ -196,13 +175,13 @@ PetroSentinel Core
 Google Sheets Data Layer
 Multi-Sheet Workbook
 ├── Knowledge Base          // Procedures and safety protocols
-├── Compliance Tracking    // EPA, DOT, permits, certifications  
-├── Ullage Logs           // Daily inventory with variance detection
-├── Driver Records        // DOT qualification files and tracking
-├── Company Assets        // Technology equipment lifecycle
-├── Contact Directory     // Emergency and personnel contacts
-├── Categories           // Knowledge organization system
-└── Approval Workflow    // Document review and approval process
+├── Compliance Tracking     // EPA, DOT, permits, certifications
+├── Ullage Logs            // Daily inventory with variance detection
+├── Driver Records         // DOT qualification files and tracking
+├── Company Assets         // Technology equipment lifecycle
+├── Contact Directory      // Emergency and personnel contacts
+├── Categories             // Knowledge organization system
+└── Approval Workflow      // Document review and approval process
 Automation Triggers
 
 Weekly Compliance Check: Monday 8:00 AM
@@ -211,7 +190,7 @@ Monthly Asset Audit: First Monday 9:00 AM
 Custom Triggers: Configurable based on business needs
 
 
-Configuration
+⚙️ Configuration
 Environment Variables
 javascript// Core system configuration
 const CONFIG = {
@@ -246,16 +225,14 @@ const tankConfiguration = [
   // Add additional tanks as needed
 ];
 
-Usage
+📊 Usage
 Daily Operations
 Morning Ullage Readings (6:00 AM)
-
 Physical Measurements
 
 Allow tanks to settle 30+ minutes
 Use calibrated ullage tape
 Record temperature and water levels
-
 
 Data Entry
 
@@ -264,16 +241,12 @@ Enter measurements for each tank
 System calculates variance automatically
 Investigate any variance >1.0%
 
-
-
 Compliance Monitoring
-
 Weekly Review (Automated Mondays)
 
 System checks all compliance items
 Email alerts sent for items due soon or overdue
 Review and take action on flagged items
-
 
 Document Updates
 
@@ -281,80 +254,34 @@ Upload new certificates immediately
 Update renewal dates in tracking system
 Notify responsible parties of changes
 
-
-
 Monthly Tasks
 Asset Management
 
-Inventory Verification
-
-Physical inspection of all equipment
-Update condition assessments
-Record any changes or issues
-
-
-Insurance and Warranty Review
-
-Verify coverage on all assets
-Update values for insurance purposes
-Track warranty expirations
-
-
+Inventory Verification: Physical inspection of all equipment
+Update Assessments: Record condition and any changes or issues
+Insurance Review: Verify coverage and update asset values
 
 Compliance Certification Review
 
-Driver Qualification Updates
-
-Review upcoming renewals
-Schedule required training
-Update emergency contact information
-
-
-Environmental Permit Status
-
-Check permit renewal schedules
-Prepare renewal applications
-Schedule required inspections
-
-
+Driver Qualifications: Review upcoming renewals and schedule training
+Environmental Permits: Check schedules and prepare renewal applications
 
 Emergency Procedures
 System Access Issues
-
-Primary Access Failure
 
 Use backup Google Sheets URL
 Access via mobile device
 Contact system administrator
 
-
-Data Recovery
-
-Check Google Sheets version history
-Restore from most recent backup
-Document any lost data for manual re-entry
-
-
-
 Compliance Emergency
-
-Immediate Response
 
 Use Emergency Contact Directory
 Follow knowledge base procedures
 Document all actions taken
-
-
-Reporting Requirements
-
-Notify regulatory agencies as required
 Update compliance tracking system
-Prepare incident documentation
 
 
-
-
-Compliance Coverage
+📋 Compliance Coverage
 Federal Regulations
 EPA Requirements
 
@@ -390,7 +317,7 @@ NFPA Codes: Fire safety and prevention requirements
 OSHA Standards: Workplace safety and hazmat operations
 
 
-API Reference
+🔌 API Reference
 Core Functions
 System Management
 javascriptsetupPetroSentinelSystem()
@@ -428,7 +355,7 @@ Data Structures
 Compliance Item
 javascript{
   itemType: "Truck Vapor Test",
-  itemId: "VH-001", 
+  itemId: "VH-001",
   description: "Unit 1 Annual Vapor Recovery Test",
   responsiblePerson: "Fleet Manager",
   lastCompleted: "2024-03-15",
@@ -469,15 +396,13 @@ if (nextDueDate && nextDueDate instanceof Date) {
   Logger.log('Invalid date format for item: ' + itemId);
 }
 
-Contributing
+🛠️ Contributing
 Development Environment Setup
-
 Google Apps Script Configuration
 
 Enable Google Apps Script API
 Set up local development with clasp CLI
 Configure version control integration
-
 
 Code Standards
 
@@ -486,22 +411,14 @@ Use JSDoc comments for all functions
 Implement comprehensive error handling
 Include Logger.log statements for debugging
 
-
-
 Contribution Guidelines
-Feature Development
+Feature Development Process
 
-Create Feature Branch
-
-bash   git checkout -b feature/new-compliance-module
-
-Development Process
-
+Create Feature Branch: git checkout -b feature/new-compliance-module
 Write comprehensive JSDoc documentation
 Include error handling and logging
 Test with sample data before deployment
 Update user manual if UI changes
-
 
 Testing Requirements
 
@@ -509,34 +426,6 @@ Test all automated triggers manually
 Verify email notifications work correctly
 Validate data entry forms and calculations
 Check permission requirements
-
-
-
-Bug Reports
-Include the following information:
-
-System Version: Current PetroSentinel version
-Google Apps Script Environment: Browser, Workspace version
-Error Messages: Complete error text from execution log
-Steps to Reproduce: Detailed reproduction steps
-Expected vs Actual Behavior: Clear description of the issue
-
-Code Review Process
-
-Automated Checks
-
-Code syntax validation
-Function documentation completeness
-Error handling implementation
-
-
-Manual Review
-
-Business logic accuracy
-Regulatory compliance verification
-User experience validation
-
-
 
 Development Roadmap
 Version 2.2 (Planned)
@@ -552,7 +441,7 @@ Advanced Analytics: Predictive compliance alerts and trend analysis
 API Integrations: Fleet management and fuel monitoring systems
 
 
-Support
+📞 Support
 Documentation Resources
 
 User Manual: Complete operational guide with setup instructions
@@ -570,7 +459,7 @@ Community Forum: User community for tips and shared experiences
 
 Direct Support Options
 
-Email Support: technical-support@truenoarthdatastrategies.com
+Email: technical-support@truenorthdatastrategies.com
 Business Hours: Monday-Friday 8:00 AM - 6:00 PM Mountain Time
 Emergency Support: Critical compliance issues and system failures
 Training Services: Custom user training and system optimization
@@ -583,30 +472,17 @@ System Integration: Connection with existing fleet and fuel management systems
 Ongoing Maintenance: Regular system updates and optimization
 
 
-License
-MIT License
-Copyright (c) 2024 True North Data Strategies LLC
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+📄 License
+MIT License - Copyright (c) 2024 True North Data Strategies LLC
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Contact Information
+📞 Contact Information
 True North Data Strategies LLC
 Enterprise automation for businesses that existed before iPhones
 
-Website: [www.truenorthdatastrategies.com]
+Website: www.truenorthdatastrategies.com
 Email: info@truenorthdatastrategies.com
 Support: support@truenorthdatastrategies.com
 Emergency: emergency@truenorthdatastrategies.com
@@ -614,12 +490,11 @@ Emergency: emergency@truenorthdatastrategies.com
 Business Hours: Monday-Friday 8:00 AM - 6:00 PM Mountain Time
 Emergency Support: Available 24/7 for critical compliance issues
 
-Acknowledgments
+🙏 Acknowledgments
 
 Google Apps Script Team - For the robust automation platform
 Petroleum Industry Professionals - For regulatory expertise and operational insights
 Beta Testing Partners - For real-world validation and feedback
 Open Source Community - For development tools and best practices
-
 
 Built with enterprise reliability for the petroleum industry's most demanding operational requirements.
